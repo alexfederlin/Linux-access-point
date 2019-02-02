@@ -10,8 +10,8 @@ sudo apt-get update
 sudo apt-get -y install hostapd dnsmasq
 ```
 
-   · hostapd let us to create the access point
-   · dnsmasq is used to create a dhcp and dns server
+   * hostapd let us to create the access point
+   * dnsmasq is used to create a dhcp and dns server
 
 Now let's stop the services of the new packets.
 ```sh
