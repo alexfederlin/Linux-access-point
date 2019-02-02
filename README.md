@@ -42,4 +42,3 @@ interface=wlan0
 dhcp-range=10.10.0.2,10.10.0.100,12h
 server=10.10.0.1
 ```
-
