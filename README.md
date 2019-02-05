@@ -57,7 +57,8 @@ clear
 #Initialise scripts to view in real time the arp table (only for kde desktops eviroments)
 #konsole --geometry 500x400+0+0 -e bash ~/arp_table.sh &
 
-#To fix the errors about driver=80211ln
+#To fix the two errors about driver=80211ln (nl80211: Could not configure driver mode and 
+#nl80211: deinit infname=wlan0 disabled_lib_rates=0....)
 airmon-ng check
 killall wpa_supplicant
 airmon-ng check kill
