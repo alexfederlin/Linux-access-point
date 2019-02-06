@@ -63,6 +63,8 @@ airmon-ng check
 killall wpa_supplicant
 airmon-ng check kill
 
+
+
 #Start the AP
 echo "------------------------------- START AP ----------------------------------"
 #Set the APIP IP (like default gateway)
@@ -85,6 +87,7 @@ echo "nameserver 10.10.0.1" >> /etc/resolv.conf
 hostapd /etc/hostapd.conf
 
 
+
 #Stop the AP: when pressed Ctrl + C
 echo "------------------------------- STOP AP ----------------------------------"
 #Deletes the firewall rules of the AP.
@@ -95,4 +98,21 @@ sysctl net.ipv4.ip_forward=0
 #Stops the DHCP, DNS services and the AP.
 service dnsmasq stop
 service hostapd stop
+```
+
+As an added we can create this other script to view the ARP table to know who connected and which is their IP.
+```sh
+sudo nano ~/arp_table.sh
+```
+```sh
+#!/bin/bash
+
+while [ True ];
+do
+  ip neighbor show > /tmp/arp_table
+	echo "IP	DEV"
+	cat /tmp/arp_table
+	sleep 1
+	clear
+done
 ```
