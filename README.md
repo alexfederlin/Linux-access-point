@@ -3,7 +3,7 @@ Configuration to create an AP in Linux (also works in Raspberry Pi!!).
 
 This configuration allow us to create a new network IEEE 802.11 using the wireless interface of any Linux PC.
 
-## Configuration
+### Configuration
 First, we need to install hostapd and dnsmasq.
 ```sh
 sudo apt-get update
@@ -123,4 +123,4 @@ sudo bash ~/access_point.sh
 sudo bash ~/arp_table.sh
 ```
 
-### Configuration
+### Example
