@@ -47,8 +47,6 @@ Now let's create the shell script that initializes all requirements for the AP.
 ```sh
 sudo nano ~/access_point.sh
 ```
-
-And we just need to copy this inside.
 ```sh
 #!/bin/bash
 
@@ -100,7 +98,7 @@ service dnsmasq stop
 service hostapd stop
 ```
 
-As an added we can create this other script to view the ARP table to know who connected and which is their IP.
+As an added, we can create this other script to view the ARP table to know who connected and which is their IP.
 ```sh
 sudo nano ~/arp_table.sh
 ```
@@ -115,4 +113,12 @@ do
 	sleep 1
 	clear
 done
+```
+
+Now we just need to execute both scripts in different terminals.
+```sh
+sudo bash ~/access_point.sh
+```
+```sh
+sudo bash ~/arp_table.sh
 ```
