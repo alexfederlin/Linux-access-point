@@ -122,3 +122,5 @@ sudo bash ~/access_point.sh
 ```sh
 sudo bash ~/arp_table.sh
 ```
+
+### Configuration
